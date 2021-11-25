@@ -1,0 +1,13 @@
+#!/bin/bash
+# zsh_utility
+# Use this script to update or setup .zshrc
+
+set -Eeuo pipefail
+
+if [[ $# -eq 0 ]]; then
+    cp ~/.zshrc .
+elif [ $1 = "setup" ]; then
+    cp .zshrc ~/.zshrc
+else
+    cp ~/.zshrc .
+fi
